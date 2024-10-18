@@ -58,3 +58,32 @@ Detectar padrões que não estão formatados corretamente (exemplo: títulos mui
     END AS DescriptionValidation
 
     FROM Products;  
+
+
+Explicação do Script
+
+Criação da Tabela e Inserção de Dados:
+
+A tabela Products contém informações sobre produtos, como o nome e a descrição.
+Os dados inseridos incluem exemplos de produtos de diferentes categorias, com alguns títulos e descrições formatados de forma inconsistente (como o uso de exclamações e termos promocionais).
+Categorização de Produtos:
+
+A função LIKE dentro de uma cláusula CASE para categorizar os produtos com base em palavras-chave encontradas no título do produto. Se a palavra "Smartphone", "Notebook", "Camiseta", "TV" ou "Liquidificador" estiver presente no nome do produto, ele será categorizado de acordo. Caso contrário, será classificado como "Outros".
+Validação de Títulos de Produtos:
+
+O script verifica o título do produto para detectar possíveis problemas. Por exemplo:
+Títulos muito curtos (menos de 10 caracteres).
+Títulos que contêm exclamações ("!").
+Títulos que contêm a palavra "Promoção".
+Isso ajuda a identificar entradas mal formatadas ou excessivamente promocionais.
+Padronização de Descrições:
+
+A função REPLACE() para remover caracteres indesejados, como hífens ("-") e exclamações ("!"), das descrições dos produtos.
+A função TRIM() é usada para remover espaços em branco desnecessários no início ou fim das descrições.
+Validação de Descrições:
+
+A função LEN() para verificar se as descrições são curtas demais (menos de 30 caracteres), o que pode indicar falta de informações relevantes.
+
+
+
+
