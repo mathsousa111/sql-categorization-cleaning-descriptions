@@ -60,7 +60,7 @@ Detectar padrões que não estão formatados corretamente (exemplo: títulos mui
     FROM Products;  
 
 
-Explicação do Script
+## Explicação do Script
 
 Criação da Tabela e Inserção de Dados:
 
